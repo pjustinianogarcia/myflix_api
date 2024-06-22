@@ -36,7 +36,7 @@ const { check, validationResult } = require('express-validator');
 
 // configure CORS
 const cors = require('cors');
-let allowedOrigins = ['http://localhost:8080'];
+let allowedOrigins = ['http://localhost:8080', 'https://myflix-api-le1z.onrender.com'];
 
 app.use(cors({
   origin: (origin, callback) => {
