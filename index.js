@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const Models = require('./models.js');
 
 //URI
-//mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 //models
 const Movies = Models.Movie;
@@ -36,7 +36,7 @@ const { check, validationResult } = require('express-validator');
 
 // configure CORS
 const cors = require('cors');
-//let allowedOrigins = ['http://localhost:1234','https://myflixachv-8f7ac3ab3517.herokuapp.com/'];
+let allowedOrigins = ['http://localhost:8080'];
 
 app.use(cors({
   origin: (origin, callback) => {
