@@ -1,0 +1,5 @@
+{"_id":{"$oid":"662aa754442f7670f5117b7c"},"Username":"nancylangraab","Birthdate":"1970-02-08","Password":"123abc","Email":"nancy_langraab@email.com"}
+{"_id":{"$oid":"662aa76a442f7670f5117b7d"},"Username":"donlothario","Birthdate":"1980-11-18","Password":"123abc","Email":"don_lothario@email.com","FavoriteMovie":["662a9861df2a2e7540117b88"]}
+{"_id":{"$oid":"663188efa16e126cc3e7dafe"},"Username":"misscrumplebottom","Birthdate":{"$date":{"$numberLong":"-924825600000"}},"Password":"123abc","Email":"miss_crumplebottom@email.com","FavoriteMovies":[],"__v":0}
+{"_id":{"$oid":"6631d11530f942cbf465f45d"},"Username":"bellagoth","Birthdate":{"$date":"1980-10-31T00:00:00Z"},"Password":"123abc","Email":"bella_goth@email.com","FavoriteMovies":[{"$oid":"662a9458df2a2e7540117b81"}],"__v":0}
+{"_id":{"$oid":"6633048c33765474ee9d2b4f"},"Username":"ninacaliente","Birthdate":{"$date":"1980-02-01T00:00:00Z"},"Password":"123abc","Email":"nina_calienteh@email.com","FavoriteMovies":[],"__v":0}
