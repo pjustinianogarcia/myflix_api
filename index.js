@@ -5,7 +5,8 @@ const Models = require('./models.js');
 
 //URI
  mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
+ .then(() => console.log('Database connection successful'))
+ .catch((err) => console.error('Database connection error:', err));
 //mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //models
@@ -76,18 +77,19 @@ app.get('/', (req, res) => {
     res.send('Welcome to my movie list!');
 });
 
-// get movies list
+mongoose.set('debug', true);
+
 app.get("/movies", async (req, res) => {
-    Movies.find()
-    
-        .then((movies) => {
-            res.status(201).json(movies);
-        })
-        .catch((err) => {
-            console.error("Error retrieving movies:",err);
-            res.status(500).send("Error: " + err);
-        });
+    try {
+        const movies = await Movies.find();
+        console.log("Movies found:", movies);
+        res.status(201).json(movies);
+    } catch (err) {
+        console.error("Error retrieving movies:", err);
+        res.status(500).send("Error: " + err);
+    }
 });
+
 
 
 
