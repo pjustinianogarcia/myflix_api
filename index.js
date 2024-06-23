@@ -76,18 +76,19 @@ app.get('/', (req, res) => {
     res.send('Welcome to my movie list!');
 });
 
-mongoose.set('debug', true);
 
-app.get("/movies", async (req, res) => {
+
+app.get("/test", async (req, res) => {
     try {
-        const movies = await Movies.find();
-        console.log("Movies found:", movies);
-        res.status(201).json(movies);
+        const test = await mongoose.connection.db.collection('movies').findOne({});
+        console.log("Test movie found:", test);
+        res.status(201).json(test);
     } catch (err) {
-        console.error("Error retrieving movies:", err);
+        console.error("Error retrieving test movie:", err);
         res.status(500).send("Error: " + err);
     }
 });
+
 
 
 
