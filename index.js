@@ -54,8 +54,6 @@ app.use(cors({
 app.use(express.json());
 
 
-//import auth module
-let auth = require('./auth')(app);
 
 
 
