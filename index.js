@@ -205,7 +205,7 @@ app.post('/users/:Username/movies/:MovieID', async (req, res) => {
 });
 
 //delete a movie from a user's list of favorites
-app.delete('/users/:Username/movies/:MovieID', { session: false }), async (req, res) => {
+app.delete('/users/:Username/movies/:MovieID', async (req, res) => {
     const { Username, MovieID } = req.params;
 
     try {
