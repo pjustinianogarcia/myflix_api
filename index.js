@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const Models = require('./models.js');
 
 //URI
- //mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+ mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //models
 const Movies = Models.Movie;
@@ -29,7 +29,7 @@ const uuid = require('uuid');
 
 
 //import express-validator
-const { check, validationResult } = require('express-validator');
+//const { check, validationResult } = require('express-validator');
 
 
 
@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
 });
 
 // get movies list
-app.get("/movies", async (req, res) => {
+app.get("/movies", (req, res) => {
     Movies.find()
     
         .then((movies) => {
