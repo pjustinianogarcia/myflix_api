@@ -2,20 +2,21 @@
 const mongoose = require('mongoose');
 
 
-//define schemas
-let genreSchema = mongoose.Schema({
-  Name: { type: String, required: true },
-  Description: String
-});
 
-  
-
+  let userSchema = mongoose.Schema({
+    Username: {type: String, required: true},
+    Birthdate: Date,
+    Password: {type: String, required: true},
+    Email: {type: String, required: true},
+    FavoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
+  });
 
   
    
 
   //export models
-  
+ 
   let User = mongoose.model('User', userSchema);
 
+  
   module.exports.User = User;
