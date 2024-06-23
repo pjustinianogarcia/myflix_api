@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Models = require('./models.js');
 
 //URI
- mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+ mongoose.connect('mongodb+srv://patriciajg683:QcSXtDRtg1ZKX33b@myflixdb.2ayrhib.mongodb.net/?retryWrites=true&w=majority&appName=myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
