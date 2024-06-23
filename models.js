@@ -1,6 +1,6 @@
 //import mongoose, bcrypt modules
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+
 
 //define schemas
 let genreSchema = mongoose.Schema({
