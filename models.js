@@ -32,14 +32,7 @@ let movieSchema = mongoose.Schema({
     FavoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
   });
 
-  //hashing
-  userSchema.statics.hashPassword = (password) => {
-    return bcrypt.hashSync(password, 10);
-  };
   
-  userSchema.methods.validatePassword = function(password) {
-    return bcrypt.compareSync(password, this.Password);
-  };
    
 
   //export models
