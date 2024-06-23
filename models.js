@@ -18,10 +18,7 @@ let directorSchema = mongoose.Schema({
 let movieSchema = mongoose.Schema({
     Title: {type: String, required: true},
     Description: {type: String, required: true},
-    Genre: { type: mongoose.Schema.Types.ObjectId, ref: 'Genre' },
-    Director: { type: mongoose.Schema.Types.ObjectId, ref: 'Director' },
-    ImagePath: String,
-    Featured: Boolean
+   
   });
   
   let userSchema = mongoose.Schema({
