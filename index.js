@@ -5,8 +5,7 @@ const Models = require('./models.js');
 
 //URI
  mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
- .then(() => console.log('Database connection successful'))
- .catch((err) => console.error('Database connection error:', err));
+
 //mongoose.connect('mongodb://localhost:27017/cfDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //models
